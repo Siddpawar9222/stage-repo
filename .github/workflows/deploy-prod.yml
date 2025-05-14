@@ -1,0 +1,34 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy-prod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
+      - name: Deploy to repo2 gh-pages (production)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PROD_REPO_TOKEN }}
+          publish_dir: ./dist
+          publish_branch: gh-pages
+          external_repository: Siddpawar9222/prod-stage
+          user_name: Siddhesh Pawar
+          user_email: siddpawar583@gmail.com
