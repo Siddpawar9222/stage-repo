@@ -29,6 +29,6 @@ jobs:
           github_token: ${{ secrets.PROD_REPO_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
-          external_repository: Siddpawar9222/prod-stage
+          external_repository: Siddpawar9222/prod-repo
           user_name: Siddhesh Pawar
           user_email: siddpawar583@gmail.com
