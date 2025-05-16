@@ -22,7 +22,8 @@ jobs:
         run: |
           npm ci
           npm run build:stage
-          echo "$VITE_CUSTOM_DOMAIN" > dist/CNAME
+          DOMAIN=$(grep ^VITE_CUSTOM_DOMAIN= .env.stage | cut -d '=' -f2)
+          echo $DOMAIN > dist/CNAME
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
