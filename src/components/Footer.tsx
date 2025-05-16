@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
       }}
     >
       <Typography variant="body2">
-        © {new Date().getFullYear()} All rights Reserved !
+        © {new Date().getFullYear()} All rights Reserved ! GeekySiddhesh Java Developer
       </Typography>
     </Box>
   );
