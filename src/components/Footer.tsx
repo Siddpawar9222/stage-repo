@@ -4,7 +4,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 const Footer: React.FC = () => {
   const theme = useTheme();
 
-  let backgroundColor = theme.palette.primary.main; 
+  let backgroundColor = theme.palette.primary.light; 
   let color = theme.palette.customText.main;
 
   return (
