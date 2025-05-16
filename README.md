@@ -1,146 +1,102 @@
-# vite-template-redux
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+# Deploying Vite + React  Project on GitHub Pages (Stage and Production Environment)
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
+A modern **React + Redux** template using [Vite](https://vitejs.dev/).
+
+## 🔧 Requirements
+
+* **Node.js** version `>=18`
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Siddpawar9222/stage-repo
 ```
 
-## Goals
+### 2. Go to Project Directory
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+```bash
+cd stage-repo
+```
 
-## Scripts
+### 3. Install Dependencies
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
-
-## Inspiration
-
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
-
-
-*** Deployment ***
-
-npm run deploy 
-
--- add cname file to ur gh-pages
-
-
-
-Great! If you add this to your `package.json`:
-
-```json
-"scripts": {
-  "dev": "vite",
-  "dev:staging": "vite --mode staging",
-  "build": "vite build --mode production",
-  "preview": "vite preview"
-}
+```bash
+npm install
 ```
 
 ---
 
-### ✅ Commands to Run Each Environment
+## 🧪 Run Project in Different Environments
 
-#### 1. **Run Development Environment**
+### 1. Run Development Environment
 
 ```bash
 npm run dev
 ```
 
-👉 Uses `.env.development`
+👉 Uses `.env` file (default mode is `development`)
 
 ---
 
-#### 2. **Run Staging Environment**
+### 2. Run Staging Environment
 
 ```bash
-npm run dev:staging
+npm run dev:stage
 ```
 
-👉 Uses `.env.staging`
+👉 Uses `.env.stage`
 
 ---
 
-#### 3. **Run Production Build Locally (Preview)**
-
-First, **build** the production bundle:
+### 3. Run Production Environment (Development Mode)
 
 ```bash
-npm run build
+npm run dev:prod
 ```
 
-👉 Uses `.env.production` and creates a `dist/` folder.
-
-Then, **preview** the built app locally:
-
-```bash
-npm run preview
-```
-
-
-
-To **run your React + Vite app in production**, you need to **build** it and then **serve** the built files.
-
-Here's how to do it step by step:
+👉 Uses `.env.prod`
 
 ---
 
-### ✅ 1. Build for Production
+## 📦 Build and Preview for Stage
 
-Use this command:
-
-```bash
-npm run build
-```
-
-This runs:
+### 1. Build Staging Bundle
 
 ```bash
-vite build --mode production
+npm run build:stage
 ```
 
-It creates an optimized build in the `dist/` folder using `.env.production`.
+👉 Uses `.env.stage` and creates the `dist/` folder.
 
----
-
-### ✅ 2. Preview Locally (Optional)
-
-If you want to preview the production build locally:
+To preview the **staging build** locally after building:
 
 ```bash
-npm run preview
+npm run preview:stage
 ```
 
-This runs:
+This will start a local server to serve the contents of the `dist/` folder.
+
+### 2. Build Production Bundle
 
 ```bash
-vite preview
+npm run build:prod
 ```
 
-It starts a local server and serves the `dist/` folder as if it's in production.
+👉 Uses `.env.prod` and creates the `dist/` folder.
 
----
 
-### ✅ 3. Deploy to a Production Server
+To preview the **production build** locally after building:
 
-You can now deploy the contents of the `dist/` folder to any static file hosting service like:
+```bash
+npm run preview:prod
+```
 
-* **Vercel**
-* **Netlify**
-* **GitHub Pages**
-* **AWS S3 + CloudFront**
-* **Nginx/Apache (self-hosted server)**
-
-Just copy the `dist/` folder contents and host them.
+This will start a local server to serve the contents of the `dist/` folder.
 
 ---
 
