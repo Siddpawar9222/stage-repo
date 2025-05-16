@@ -32,3 +32,116 @@ npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
 npm run deploy 
 
 -- add cname file to ur gh-pages
+
+
+
+Great! If you add this to your `package.json`:
+
+```json
+"scripts": {
+  "dev": "vite",
+  "dev:staging": "vite --mode staging",
+  "build": "vite build --mode production",
+  "preview": "vite preview"
+}
+```
+
+---
+
+### ✅ Commands to Run Each Environment
+
+#### 1. **Run Development Environment**
+
+```bash
+npm run dev
+```
+
+👉 Uses `.env.development`
+
+---
+
+#### 2. **Run Staging Environment**
+
+```bash
+npm run dev:staging
+```
+
+👉 Uses `.env.staging`
+
+---
+
+#### 3. **Run Production Build Locally (Preview)**
+
+First, **build** the production bundle:
+
+```bash
+npm run build
+```
+
+👉 Uses `.env.production` and creates a `dist/` folder.
+
+Then, **preview** the built app locally:
+
+```bash
+npm run preview
+```
+
+
+
+To **run your React + Vite app in production**, you need to **build** it and then **serve** the built files.
+
+Here's how to do it step by step:
+
+---
+
+### ✅ 1. Build for Production
+
+Use this command:
+
+```bash
+npm run build
+```
+
+This runs:
+
+```bash
+vite build --mode production
+```
+
+It creates an optimized build in the `dist/` folder using `.env.production`.
+
+---
+
+### ✅ 2. Preview Locally (Optional)
+
+If you want to preview the production build locally:
+
+```bash
+npm run preview
+```
+
+This runs:
+
+```bash
+vite preview
+```
+
+It starts a local server and serves the `dist/` folder as if it's in production.
+
+---
+
+### ✅ 3. Deploy to a Production Server
+
+You can now deploy the contents of the `dist/` folder to any static file hosting service like:
+
+* **Vercel**
+* **Netlify**
+* **GitHub Pages**
+* **AWS S3 + CloudFront**
+* **Nginx/Apache (self-hosted server)**
+
+Just copy the `dist/` folder contents and host them.
+
+---
+
+

@@ -4,8 +4,8 @@ import { Box, Typography, useTheme } from "@mui/material";
 const Footer: React.FC = () => {
   const theme = useTheme();
 
-  let backgroundColor = theme.palette.primary.main; 
-  let color = theme.palette.customText.main;
+  let backgroundColor = theme.palette.primary.contrastText; 
+  let color = "red";
 
   return (
     <Box
@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
       }}
     >
       <Typography variant="body2">
-        © {new Date().getFullYear()} All rights Reserved !
+        © {new Date().getFullYear()} All rights Reserved ! GeekySiddhesh Java Developer
       </Typography>
     </Box>
   );
