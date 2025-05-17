@@ -22,6 +22,7 @@ jobs:
         run: |
           npm ci
           npm run build:stage
+          cp dist/index.html dist/404.html
           DOMAIN=$(grep ^VITE_CUSTOM_DOMAIN= .env.stage | cut -d '=' -f2)
           echo $DOMAIN > dist/CNAME
 
